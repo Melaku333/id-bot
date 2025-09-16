@@ -2,3 +2,4 @@ aiogram
 playwright 
 requests 
 pillow
+Flask==3.0.3
