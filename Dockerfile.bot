@@ -1,0 +1,13 @@
+FROM python:3.10-slim
+
+WORKDIR /bot
+
+COPY requirements-bot.txt .
+RUN pip install --no-cache-dir -r requirements-bot.txt
+
+COPY bot.py .
+
+ENV BOT_TOKEN=""
+ENV BASE_URL=""
+
+CMD ["python", "bot.py"]
